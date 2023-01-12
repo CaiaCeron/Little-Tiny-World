@@ -14,6 +14,8 @@ public class SaveSlotsMenu : Menus
 
     private SaveSlots[] saveSlots;
 
+    [SerializeField] private bool isUsingLoadGameButton = false;
+
     private void Awake()
     {
         saveSlots = this.GetComponentsInChildren<SaveSlots>();
@@ -23,7 +25,7 @@ public class SaveSlotsMenu : Menus
     {
         foreach (SaveSlots saveSlots in saveSlots)
         {
-            saveSlots.Setinteractable(false);
+            saveSlots.SetInteractable(false);
         
         }
 
@@ -31,9 +33,12 @@ public class SaveSlotsMenu : Menus
     }
 
 
-    public void ActiveMenu()
+    public void ActiveMenu(bool isUsingLoadGameButton)
     {
         gameObject.SetActive(true);
+
+        this.isUsingLoadGameButton = isUsingLoadGameButton;
+
 
         Dictionary<string, GameData> profilesGameData = GameDataManager.instance.GetAllProfilesGameData();
 
@@ -42,6 +47,14 @@ public class SaveSlotsMenu : Menus
             GameData profilaData = null;
             profilesGameData.TryGetValue(saveSlot.GetProfileId(), out profilaData);
             saveSlot.SetData(profilaData);
+            if (profilesGameData == null && isUsingLoadGameButton)
+            {
+                saveSlot.SetInteractable(false);
+            }
+            else
+            {
+                saveSlot.SetInteractable(true);
+            }
         }
     }
 
@@ -59,8 +72,14 @@ public class SaveSlotsMenu : Menus
 
     public void OnSaveSlotButtonPressed(SaveSlots saveSlot)
     {
+        DisableMenuButtons();
+
         GameDataManager.instance.ChangeProfileId(saveSlot.GetProfileId());
-        GameDataManager.instance.NewGame();
+        if (!isUsingLoadGameButton)
+        {
+            GameDataManager.instance.NewGame();
+        }
+
         SceneManager.LoadSceneAsync("OverWorld");
 
     }

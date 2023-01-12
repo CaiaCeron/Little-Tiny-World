@@ -32,8 +32,8 @@ public class MainMenu : Menus
 
     public void OnNewGameButtonPressed()
     {
-        saveSlotsMenu.ActiveMenu();
-        this.DeactivateMenu();
+        saveSlotsMenu.ActiveMenu(false);
+        DeactivateMenu();
 
     }
 
@@ -46,6 +46,13 @@ public class MainMenu : Menus
         SceneManager.LoadSceneAsync("OverWorld");
     }
 
+
+    public void OnLoadGameButtonPressed() 
+    {
+        saveSlotsMenu.ActiveMenu(true);
+        DeactivateMenu();
+    }
+
     public void OnQuitGameButtonPressed()
     {
         DisableMenuButtonsUI();
@@ -55,11 +62,11 @@ public class MainMenu : Menus
 
     public void ActivateMenu()
     {
-        this.gameObject.SetActive(true);
+        gameObject.SetActive(true);
     }
 
     public void DeactivateMenu()
     {
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

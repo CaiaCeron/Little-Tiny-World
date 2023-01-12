@@ -23,9 +23,9 @@ public class SaveSlots : MonoBehaviour
         saveSlotButon = GetComponent<Button>();
     }
 
-    public void Setinteractable(bool interactable)
+    public void SetInteractable(bool interactable)
     {
-        saveSlotButon.interactable= interactable;
+        saveSlotButon.interactable = interactable;
     }
 
 
