@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
     private float movementSpeed = 0.0f;
@@ -50,5 +50,17 @@ public class PlayerController : MonoBehaviour
         sprite.flipX = direction.x >= 1 ? true : false;
         anim.SetFloat("MoveY", direction.y);
         anim.SetFloat("Speed", direction.sqrMagnitude);
+    }
+
+
+    public void LoadGameData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+
+    }
+
+    public void SaveGameData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position;
     }
 }
