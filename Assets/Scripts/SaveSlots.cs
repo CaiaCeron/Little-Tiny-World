@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class SaveSlots : MonoBehaviour
 {
@@ -14,6 +15,18 @@ public class SaveSlots : MonoBehaviour
     [SerializeField] private GameObject hasDataContent;
 
     [SerializeField] private TextMeshProUGUI playerPositionText;
+
+    private Button saveSlotButon;
+
+    private void Awake()
+    {
+        saveSlotButon = GetComponent<Button>();
+    }
+
+    public void Setinteractable(bool interactable)
+    {
+        saveSlotButon.interactable= interactable;
+    }
 
 
     public void SetData(GameData data)

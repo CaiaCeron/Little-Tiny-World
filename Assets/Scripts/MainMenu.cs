@@ -30,7 +30,7 @@ public class MainMenu : Menus
         } 
     }
 
-    public void OnNewGameClicked()
+    public void OnNewGameButtonPressed()
     {
         saveSlotsMenu.ActiveMenu();
         this.DeactivateMenu();
@@ -39,14 +39,14 @@ public class MainMenu : Menus
 
     
 
-    public void OnContinueGameClicked()
+    public void OnContinueGameButtonPressed()
     {
         DisableMenuButtonsUI();
 
         SceneManager.LoadSceneAsync("OverWorld");
     }
 
-    public void OnQuitGameClicked()
+    public void OnQuitGameButtonPressed()
     {
         DisableMenuButtonsUI();
 
