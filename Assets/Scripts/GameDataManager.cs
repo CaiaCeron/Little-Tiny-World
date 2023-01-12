@@ -23,7 +23,7 @@ public class GameDataManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Found and old instance of GameDataManager. Newest one wil be Destroyed.");
+            Debug.LogWarning("Found and old instance of GameDataManager. Newest one wil be Destroyed.");
             Destroy(this.gameObject);
             return;
         }
@@ -76,7 +76,7 @@ public class GameDataManager : MonoBehaviour
 
         if (this.gameData == null)
         {
-            Debug.Log("No game data was found. Please select 'New Game' option on Main Menu.");
+            Debug.LogWarning("No game data was found. Please select 'New Game' option on Main Menu.");
             return;
         }
 

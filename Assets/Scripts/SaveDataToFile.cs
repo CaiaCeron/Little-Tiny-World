@@ -39,7 +39,7 @@ public class SaveDataToFile
             catch (Exception ex)
             {
 
-                UnityEngine.Debug.LogError("Something went wrong while load data to file: " + fullPath + "\n" + ex);
+                UnityEngine.Debug.LogError("Something went wrong while loading the data to the file: " + fullPath + "\n" + ex);
             }
 
         }
@@ -67,7 +67,7 @@ public class SaveDataToFile
         }
         catch(Exception ex) 
         {
-            UnityEngine.Debug.LogError("Something went wrong while save data to file: " + fullPath + "\n" + ex);
+            UnityEngine.Debug.LogError("Something went wrong while saving the data to the file: " + fullPath + "\n" + ex);
         }
     }
 }
