@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : Menus
 {
+    [Header("Menu Navigation")]
+    [SerializeField] private SaveSlotsMenu saveSlotsMenu;
+
+    [Header("Main Menu")]
     [SerializeField] private Button btnNewGame;
     [SerializeField] private Button btnContinueGame;
     [SerializeField] private Button btnQuitGame;
@@ -27,13 +32,12 @@ public class MainMenu : MonoBehaviour
 
     public void OnNewGameClicked()
     {
-        DisableMenuButtonsUI();
-
-        GameDataManager.instance.NewGame();
-
-        SceneManager.LoadSceneAsync("OverWorld");
+        saveSlotsMenu.ActiveMenu();
+        this.DeactivateMenu();
 
     }
+
+    
 
     public void OnContinueGameClicked()
     {
@@ -47,5 +51,15 @@ public class MainMenu : MonoBehaviour
         DisableMenuButtonsUI();
 
         Application.Quit();
+    }
+
+    public void ActivateMenu()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public void DeactivateMenu()
+    {
+        this.gameObject.SetActive(false);
     }
 }

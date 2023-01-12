@@ -7,17 +7,17 @@ public class GameDataManager : MonoBehaviour
 {
     [Header("File Storage config")]
     [SerializeField] private string fileName;
-
     [Header("Debbugin Mode")]
     [SerializeField] private bool initializeDataOnEditor = false;
 
-    private SaveDataToFile dataToFile;
-
     public static GameDataManager instance { get; private set; }
-    
-    private GameData gameData;
-
     private List<IDataPersistence> gameDataPersistenceObjects;
+    private SaveDataToFile dataToFile;
+    private GameData gameData;
+    private string selectedProfileId = "test";
+
+
+    #region Private Methods
 
     private void Awake()
     {
@@ -56,8 +56,10 @@ public class GameDataManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
         SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
+    #endregion
 
 
+    #region Public Methods
 
     public void NewGame()
     {
@@ -66,7 +68,7 @@ public class GameDataManager : MonoBehaviour
 
     public void LoadGame()
     {
-        this.gameData = dataToFile.Load();
+        this.gameData = dataToFile.Load(selectedProfileId);
 
         if (this.gameData == null && initializeDataOnEditor)
         {
@@ -101,7 +103,7 @@ public class GameDataManager : MonoBehaviour
             dataPersistence.SaveGameData(ref gameData);
         }
 
-        dataToFile.Save(gameData);
+        dataToFile.Save(gameData, selectedProfileId);
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -112,15 +114,25 @@ public class GameDataManager : MonoBehaviour
 
     public void OnSceneUnloaded(Scene scene)
     {
-
         SaveGame();
-
     }
 
     public bool HasGameData()
     {
         return this.gameData != null;
     }
+    public Dictionary<string, GameData> GetAllProfilesGameData()
+    {
+        return dataToFile.LoadAllProfiles();
+    }
+
+    public void ChangeProfileId(string newProfileID)
+    {
+        this.selectedProfileId= newProfileID;
+    }
+
+
+    #endregion
 }
 
 
