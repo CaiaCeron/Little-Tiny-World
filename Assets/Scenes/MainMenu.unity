@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a816fd5f65b1b4abfc26b4924cff7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstMenuItem: {fileID: 1841882981}
+  firstMenuItem: {fileID: 8674842854853496220}
   mainMenu: {fileID: 1633656946}
   backButton: {fileID: 1285738342}
   isUsingLoadGameButton: 0
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f4f954812a71746adb4fddac872850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstMenuItem: {fileID: 1726779730}
+  firstMenuItem: {fileID: 1726779732}
   saveSlotsMenu: {fileID: 1404777959}
   btnNewGame: {fileID: 1726779732}
   btnContinueGame: {fileID: 1659970263}
@@ -2091,12 +2091,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1751184451}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1841882981 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8674842853012679422, guid: ffa0bb45a9e8fd746aec98b9e107b00b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8674842854853496219}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1841882984 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8674842853012679411, guid: ffa0bb45a9e8fd746aec98b9e107b00b,
@@ -2147,8 +2141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e39000903c40c40b2191f374d58cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: LittleTinyWorldSaveData.json
   initializeDataOnEditor: 0
+  disableDataPersistence: 0
+  overrideSelectedProfileId: 0
+  testProfile: TEST
+  fileName: LittleTinyWorldSaveData.json
 --- !u!1 &1908160462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,3 +2688,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffa0bb45a9e8fd746aec98b9e107b00b, type: 3}
+--- !u!114 &8674842854853496220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8674842853012679410, guid: ffa0bb45a9e8fd746aec98b9e107b00b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8674842854853496219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

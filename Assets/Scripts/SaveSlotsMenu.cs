@@ -63,8 +63,8 @@ public class SaveSlotsMenu : Menus
 
             }
         }
-
-        StartCoroutine(SetFirstItemSelected(firstSelected));
+        Button firstButtonSelected = firstSelected.GetComponent<Button>();
+        SetFirstItemSelected(firstButtonSelected);
     }
 
 

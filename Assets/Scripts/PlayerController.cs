@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, IDataPersistence
 {
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     void Update()
     {
         CharacterInput();
+
+        //For Debug Purpose.
+        BackToMainMenu();
     }
 
 
@@ -52,6 +56,16 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         anim.SetFloat("Speed", direction.sqrMagnitude);
     }
 
+    private void BackToMainMenu()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            GameDataManager.instance.SaveGame();
+
+            SceneManager.LoadSceneAsync("MainMenu");
+        }
+    }
+
 
     public void LoadGameData(GameData data)
     {
@@ -62,4 +76,6 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     {
         data.playerPosition = transform.position;
     }
+
+
 }
