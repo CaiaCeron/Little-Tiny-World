@@ -5,16 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class GameDataManager : MonoBehaviour
 {
-    [Header("File Storage config")]
-    [SerializeField] private string fileName;
     [Header("Debbugin Mode")]
     [SerializeField] private bool initializeDataOnEditor = false;
+    [SerializeField] private bool disableDataPersistence = false;
+    [SerializeField] private bool overrideSelectedProfileId = false;
+    [SerializeField] private string testProfile = "TEST";
+
+
+    [Header("File Storage config")]
+    [SerializeField] private string fileName;
+    
 
     public static GameDataManager instance { get; private set; }
     private List<IDataPersistence> gameDataPersistenceObjects;
     private SaveDataToFile dataToFile;
     private GameData gameData;
-    private string selectedProfileId = "test";
+    private string selectedProfileId = "";
 
 
     #region Private Methods
@@ -24,14 +30,26 @@ public class GameDataManager : MonoBehaviour
         if (instance != null)
         {
             Debug.LogWarning("Found and old instance of GameDataManager. Newest one wil be Destroyed.");
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
         instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
 
-        this.dataToFile = new SaveDataToFile(Application.persistentDataPath, fileName);
+        if (disableDataPersistence) 
+        {
+            Debug.LogWarning("Data Persistence is Disable!!!");
+        }
+
+        dataToFile = new SaveDataToFile(Application.persistentDataPath, fileName);
+        selectedProfileId = dataToFile.GetMostUpdateProfile();
+
+        if (overrideSelectedProfileId)
+        {
+            selectedProfileId = testProfile;
+            Debug.LogWarning("Override Profile is Enable!!!");
+        }
     }
 
     private void OnApplicationQuit()
@@ -48,13 +66,11 @@ public class GameDataManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
     }
     #endregion
 
@@ -67,16 +83,21 @@ public class GameDataManager : MonoBehaviour
     }
 
     public void LoadGame()
-    {
-        this.gameData = dataToFile.Load(selectedProfileId);
+    { 
+        if (disableDataPersistence)
+        {
+            return;
+        }
 
-        if (this.gameData == null && initializeDataOnEditor)
+        gameData = dataToFile.Load(selectedProfileId);
+
+        if (gameData == null && initializeDataOnEditor)
         {
             NewGame();
         }
 
 
-        if (this.gameData == null)
+        if (gameData == null)
         {
             Debug.LogWarning("No game data was found. Please select 'New Game' option on Main Menu.");
             return;
@@ -91,8 +112,12 @@ public class GameDataManager : MonoBehaviour
 
     public void SaveGame()
     {
+        if (disableDataPersistence)
+        {
+            return;
+        }
 
-        if (this.gameData == null)
+        if (gameData == null)
         {
             Debug.LogWarning("No save game data was found. Please select 'New Game' option on Main Menu");
             return;
@@ -100,21 +125,19 @@ public class GameDataManager : MonoBehaviour
 
         foreach (IDataPersistence dataPersistence in gameDataPersistenceObjects)
         {
-            dataPersistence.SaveGameData(ref gameData);
+            dataPersistence.SaveGameData(gameData);
         }
 
+        gameData.lastTimeUpdate = System.DateTime.Now.ToBinary();
+
         dataToFile.Save(gameData, selectedProfileId);
+
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         this.gameDataPersistenceObjects = FindAllGameDataPersistence();
         LoadGame();
-    }
-
-    public void OnSceneUnloaded(Scene scene)
-    {
-        SaveGame();
     }
 
     public bool HasGameData()
@@ -128,7 +151,7 @@ public class GameDataManager : MonoBehaviour
 
     public void ChangeProfileId(string newProfileID)
     {
-        this.selectedProfileId= newProfileID;
+        selectedProfileId= newProfileID;
     }
 
 

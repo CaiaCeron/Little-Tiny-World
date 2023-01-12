@@ -90,6 +90,8 @@ public class SaveSlotsMenu : Menus
             GameDataManager.instance.NewGame();
         }
 
+        GameDataManager.instance.SaveGame();
+
         SceneManager.LoadSceneAsync("OverWorld");
 
     }

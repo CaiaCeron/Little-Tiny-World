@@ -13,7 +13,9 @@ public class MainMenu : Menus
     [Header("Main Menu")]
     [SerializeField] private Button btnNewGame;
     [SerializeField] private Button btnContinueGame;
+    [SerializeField] private Button btnLoadGame;
     [SerializeField] private Button btnQuitGame;
+
 
     private void DisableMenuButtonsUI()
     {
@@ -24,9 +26,10 @@ public class MainMenu : Menus
 
     private void Start()
     {
-        if (GameDataManager.instance.HasGameData())
+        if (!GameDataManager.instance.HasGameData())
         {
-            btnContinueGame.interactable = true;
+            btnContinueGame.interactable = false;
+            btnLoadGame.interactable = false;
         } 
     }
 
@@ -42,6 +45,8 @@ public class MainMenu : Menus
     public void OnContinueGameButtonPressed()
     {
         DisableMenuButtonsUI();
+
+        GameDataManager.instance.SaveGame();
 
         SceneManager.LoadSceneAsync("OverWorld");
     }

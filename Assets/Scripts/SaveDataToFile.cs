@@ -20,6 +20,11 @@ public class SaveDataToFile
 
     public GameData Load(string profileId)
     {
+        if(profileId == null)
+        {
+            return null;
+        }
+
         string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
         GameData loadedGameData = null;
         if (File.Exists(fullPath))
@@ -50,6 +55,11 @@ public class SaveDataToFile
 
     public void Save(GameData data, string profileId) 
     {
+        if (profileId == null)
+        {
+            return;
+        }
+
         string fullPath = Path.Combine(dataDirPath, profileId ,dataFileName);
 
         try
@@ -105,6 +115,38 @@ public class SaveDataToFile
         return profileDictionary;
     }
 
+    public string GetMostUpdateProfile()
+    {
+        string mostRecentProfileId = null;
+
+        Dictionary<string, GameData> profilesGameData = LoadAllProfiles();
+        foreach (KeyValuePair<string, GameData> pair in profilesGameData)
+        {
+            string profileId = pair.Key;
+            GameData gameData = pair.Value;
+            if (gameData == null)
+            {
+                UnityEngine.Debug.LogWarning("Skip this entry because gamedata is null!!");
+                continue;
+            }
+            if (mostRecentProfileId == null)
+            {
+                UnityEngine.Debug.Log("This is the first entry in mostRecentProfile variable");
+                mostRecentProfileId = profileId;
+            }
+            else
+            {
+                DateTime mostRecentDateTime = DateTime.FromBinary(profilesGameData[mostRecentProfileId].lastTimeUpdate);
+                DateTime newDateTime = DateTime.FromBinary(gameData.lastTimeUpdate);
+                if (newDateTime > mostRecentDateTime)
+                {
+                    mostRecentProfileId = profileId;
+                }
+            }
+        }
+
+        return mostRecentProfileId;
+    }
 
     #endregion
 }
