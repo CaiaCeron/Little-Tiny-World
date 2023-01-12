@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class SaveSlotsMenu : Menus
 {
@@ -18,7 +19,7 @@ public class SaveSlotsMenu : Menus
 
     private void Awake()
     {
-        saveSlots = this.GetComponentsInChildren<SaveSlots>();
+        saveSlots = GetComponentsInChildren<SaveSlots>();
     }
 
     private void DisableMenuButtons()
@@ -34,11 +35,12 @@ public class SaveSlotsMenu : Menus
 
 
     public void ActiveMenu(bool isUsingLoadGameButton)
-    {
+    {   
+        GameObject firstSelected = backButton.gameObject;
+
         gameObject.SetActive(true);
 
         this.isUsingLoadGameButton = isUsingLoadGameButton;
-
 
         Dictionary<string, GameData> profilesGameData = GameDataManager.instance.GetAllProfilesGameData();
 
@@ -54,9 +56,17 @@ public class SaveSlotsMenu : Menus
             else
             {
                 saveSlot.SetInteractable(true);
+                if (firstSelected.Equals(backButton.gameObject))
+                {
+                    firstSelected = saveSlot.gameObject;
+                }
+
             }
         }
+
+        StartCoroutine(SetFirstItemSelected(firstSelected));
     }
+
 
     public void DeactivateMenu()
     {
