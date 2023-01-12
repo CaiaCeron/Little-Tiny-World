@@ -44,10 +44,10 @@ public class SaveSlotsMenu : Menus
 
         foreach(SaveSlots saveSlot in saveSlots)
         {
-            GameData profilaData = null;
-            profilesGameData.TryGetValue(saveSlot.GetProfileId(), out profilaData);
-            saveSlot.SetData(profilaData);
-            if (profilesGameData == null && isUsingLoadGameButton)
+            GameData profileData = null;
+            profilesGameData.TryGetValue(saveSlot.GetProfileId(), out profileData);
+            saveSlot.SetData(profileData);
+            if (profileData == null && isUsingLoadGameButton)
             {
                 saveSlot.SetInteractable(false);
             }
