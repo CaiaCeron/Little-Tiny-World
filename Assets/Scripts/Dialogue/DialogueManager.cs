@@ -6,6 +6,12 @@ using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager instance { get; private set; }
+    public bool isDialogPlaying { get; private set; }
+    
+    private Story currentStory;
+
+
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -14,14 +20,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
 
-
-    private Story currentStory;
-
-    public static DialogueManager instance { get; private set; }
-
-    public bool isDialogPlaying { get; private set; }
-
- 
 
     private void Awake()
     {
@@ -52,7 +50,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("Interact"))
+        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Interact"))
         {
             ContinueStory();
         }
@@ -105,6 +103,8 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         isDialogPlaying = true;
         dialoguePanel.SetActive(true);
+
+        ContinueStory();
     }
 
     public void SelectChoice(int choiceIndex)
