@@ -17,8 +17,18 @@ public class Interactable: MonoBehaviour
             if (Input.GetButtonDown(buttonName))
             {
                 interactAction.Invoke();
-                Debug.Log("Interactable Button Pressed");
+                
             }
+        }
+    }
+
+
+    internal void OnInteractionAction(string buttonName)
+    {
+        if (Input.GetButtonDown(buttonName))
+        {
+            interactAction.Invoke();
+            Debug.Log("Interactable Button Pressed");
         }
     }
 

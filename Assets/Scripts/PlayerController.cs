@@ -32,11 +32,20 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
     void FixedUpdate()
     {
+        if (DialogueManager.instance.isDialogPlaying)
+        {
+            return;
+        }
         CharacterMovement();
     }
 
     private void CharacterInput()
     {
+        if (DialogueManager.instance.isDialogPlaying)
+        {
+            return;
+        }
+
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
         CharacterAnimation(direction);
