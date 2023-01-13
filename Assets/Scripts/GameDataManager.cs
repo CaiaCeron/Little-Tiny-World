@@ -79,7 +79,7 @@ public class GameDataManager : MonoBehaviour
 
     public void NewGame()
     {
-        this.gameData = new GameData();
+        gameData = new GameData();
     }
 
     public void LoadGame()
@@ -136,13 +136,13 @@ public class GameDataManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        this.gameDataPersistenceObjects = FindAllGameDataPersistence();
+        gameDataPersistenceObjects = FindAllGameDataPersistence();
         LoadGame();
     }
 
     public bool HasGameData()
     {
-        return this.gameData != null;
+        return gameData != null;
     }
     public Dictionary<string, GameData> GetAllProfilesGameData()
     {
