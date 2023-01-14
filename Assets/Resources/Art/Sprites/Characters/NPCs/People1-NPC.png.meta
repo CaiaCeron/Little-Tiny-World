@@ -1,0 +1,2258 @@
+fileFormatVersion: 2
+guid: ae8b4baade8bb3c4aa683aef2d7f3a6c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: People1-NPC_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 336
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff33202f9c17cb4cafa0cf62952824d
+      internalID: 999380071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 336
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd834845c067e934baa4c9e5b0eadc2c
+      internalID: 143475367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 336
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4296b46dbc78c943b33b394c5cae70f
+      internalID: 1396578192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 336
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda0ed542146a2b418b2f2c7ec92cb00
+      internalID: -116526769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 336
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20742f2bb5d4bc044bba383e6d090e63
+      internalID: -858768525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_5
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 336
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128fa6cc8419f2c4a82acb148c168f3c
+      internalID: 628506471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_6
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 336
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb614b639a416d418d678f3dc6a3a0f
+      internalID: -550281856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_7
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 336
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d85bab8aa2047848824d3f652783dff
+      internalID: -1652626280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_8
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 336
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017c1154919aab94ea1cbc2bec3e35b4
+      internalID: -2118831599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_9
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 336
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03c9e2cd3e4ebb4285161d65fbf9c99
+      internalID: 2098015035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_10
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 336
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab6d83d5f03c7946921e36504676da0
+      internalID: 67547741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_11
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 336
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8cf5d91bc8b2f4ba69ab2cd02d1f69
+      internalID: 855080086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 288
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511a34edf09836c4f9de7f598e5c6d7e
+      internalID: -919771987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 288
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd26971704286b48a1b8138bb52cca8
+      internalID: 97274968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 288
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddcd594e2c3b6147a8c25516fb45912
+      internalID: 2100974092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_15
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 288
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a53734f422038a4eac50167614a8eac
+      internalID: -1732696075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_16
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 288
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a8f8a7613b6584fa9690acc70b5efd
+      internalID: 1795571919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_17
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 288
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8df2d27118c6d84cbe32d44e0cd9f1b
+      internalID: 1031761680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_18
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 288
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb63e1e14a9a024a9f0b18b1ba71a15
+      internalID: -1600332982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_19
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 288
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 311f3f59e713f6d45b683716de19b13e
+      internalID: 476021933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_20
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 288
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4aca5c46b7cb04e980b175a1d535d1
+      internalID: -230771662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_21
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 288
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48579f74aa65084582c0d1f3ffdd3ee
+      internalID: 171147658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_22
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 288
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc71b40d6e10562488639d541ad6e317
+      internalID: -2022923922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_23
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 288
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d64dc81e581ce488abc3dd72cf3502
+      internalID: 1742656726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_24
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 240
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95df854dd237988419f3d5b69f4fd8a9
+      internalID: 763731644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 240
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a0cb86c47206443a4aafe2b78d09e3
+      internalID: 900755602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_26
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 240
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb149949841d8de449c2786a1473c205
+      internalID: 1837069217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_27
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 240
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c44a69830c19d44aff718b3c183b1f
+      internalID: -284185720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_28
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 240
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd1590799b31a84c81407b8c2b3a821
+      internalID: 1341595691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_29
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 240
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de10e90d545bbb4781a49693f0e9cb1
+      internalID: 1622642927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_30
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 240
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b0f35e2a2661b46ae5b36bfa054e3a
+      internalID: -1506596222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_31
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 240
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6e501ae0f8076469d0bf13cc56b8f5
+      internalID: -1277309397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_32
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 240
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f60ba4efa257b4ca1bf27891899dec
+      internalID: -1036707233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_33
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 240
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89c8d4d6881bbd44a824cae60f686db
+      internalID: -842079715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_34
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 240
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8217fe8e388003d4193a4133c62100e3
+      internalID: 1052755434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_35
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 240
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752f998892284d245954f0453d5e3e6d
+      internalID: -1487203248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_36
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 192
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c990294b10c68f34bb7f867e4f00104f
+      internalID: -1316873346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_37
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 192
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d83d25bcd2f50c4d9f2c549308ba8b6
+      internalID: 997652174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_38
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 192
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05cb702e7f0b13429fcfec8edce66ec
+      internalID: 675588268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_39
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 192
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d043e2806d0d2544a8c521650de72824
+      internalID: -379503627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_40
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 192
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9023ff0973ded4fa90b8166d0a5f28
+      internalID: 1752146050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_41
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 192
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548758a9903905f448e0d0c928d8b220
+      internalID: -433939842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_42
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 192
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7715fc60a91ebc5418017234146a5923
+      internalID: 985337197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_43
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 192
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e51d7b452c4de44f850203584633b4b
+      internalID: 29311483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_44
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 192
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e0ae912dfd83f4bab70212cd3df5fd
+      internalID: -1858335882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_45
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 192
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59aaccdca6a6a64b91224de4ba0615b
+      internalID: -709272853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_46
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 192
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b10a0338bcb1d4492b01865e833f19
+      internalID: 2119794077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_47
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 192
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04b3fec4466db64caf1c17917f19a62
+      internalID: 866101983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_48
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 144
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef9c409c7058e444aa6954a5f82d054
+      internalID: -964635275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_49
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 144
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24980dc66a4be54f863d8f86d17b8a7
+      internalID: 975014309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_50
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 144
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a34d17178898848a9cd4003e35b18d
+      internalID: -640241026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_51
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 144
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0c7a6c87f91246ab6d70ccea30468
+      internalID: 1223216193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_52
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 144
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05d7ce7be7b1db48b265d05b0724a12
+      internalID: -513549189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_53
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 144
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5f243d0b7a13149a30af61a551cec8
+      internalID: -1199016185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_54
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 144
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a136c7d6a9447e14c8b991273de391d5
+      internalID: -1501685113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_55
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 144
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636748d63311d134b89f40c7f07ab5da
+      internalID: 1859493045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_56
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 144
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53337a742f62fc347ab91886288bf060
+      internalID: -2016087230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_57
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 144
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839c10adf8ca03d41a3603e70038b4dc
+      internalID: 1763274690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_58
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 144
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f4d032c1024f24fb0e46b3dd12f2ff
+      internalID: 1705604015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_59
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 144
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2124fcf064925e14fa067dfefd2683cf
+      internalID: -1901094488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_60
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 96
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dea859488794a40a6d6ab7591a717c
+      internalID: -1060994351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_61
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 96
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5124933c6f811334790869a4b349f70a
+      internalID: 120364295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_62
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 96
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1e8425d43cd71479cc09f937094f33
+      internalID: 511018139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_63
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 96
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfa451d18d727e46bc75870c33fb644
+      internalID: -1917641487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_64
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 96
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2347d83fe759e4743a29e6ff2d63c3c3
+      internalID: 1778112073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_65
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 96
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba40a5565e387c499caf3babc16594e
+      internalID: -76776000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_66
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 96
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679dc611b4c928548b464da4faa3b0a2
+      internalID: 342139482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_67
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 96
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324e092481b0d2a4aad5673863fe9232
+      internalID: 347763731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_68
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 96
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180871fd01a091842b0d4479f8d84726
+      internalID: 1922457536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_69
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 96
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b734138bb41b04193f5317e6f83094
+      internalID: 1413891210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_70
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 96
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0d9131aa56c094bae201550d74526b
+      internalID: 1181882683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_71
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 96
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da38e6c7329b79b4691478e8992651e2
+      internalID: 481482749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_72
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 48
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff7a88a11a04134587a533490ba6303
+      internalID: -2103042008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_73
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 48
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d06f0c6d8f45041892483c183301ee
+      internalID: -664426631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_74
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 48
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ea7b51d882a9444a5c460dd1b83738
+      internalID: -1238757431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_75
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 48
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e4b7d024e721a48a49b9c3144f5e17
+      internalID: 1254523091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_76
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 48
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bcec9565e2cf84987b616d85152b35
+      internalID: -1379360468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_77
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 48
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf3c5feebe4ce541b85fb804d616298
+      internalID: 1153149296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_78
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 48
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699417f9178575c45bbfcc074961caf6
+      internalID: 1045896330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_79
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 48
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e0d82b63f54664d8a3f6ae6c2f10c2
+      internalID: 1405835296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_80
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 48
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c863f07004dcb7145869cdae2884b57f
+      internalID: -788187881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_81
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 48
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3539603c3e5a04f9d78806790ea792
+      internalID: -253500690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_82
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 48
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1f07d514c797f48b671b00d05e8235
+      internalID: 635370438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_83
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 48
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf1ef917ad3d3c4d94d3d8717d820f4
+      internalID: -1653145842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_84
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5905fd3689d46624aa271f726c370cdc
+      internalID: -1012101611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_85
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0a17f9cdb4854499e335b523236be1
+      internalID: 282392600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_86
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6ff667fca35fe4ab678ba30612c084
+      internalID: 2137970305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_87
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07122310c59ba49479ddfd6d82c4155b
+      internalID: 1747154631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_88
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 0
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fbfbec80555314e929b821b77a8941
+      internalID: -2021384066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_89
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 0
+        width: 37
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4224749f85d764eb267a03d8e5ae5f
+      internalID: -622889151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_90
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 0
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438399ef1f9bc484a9c2b1b1cfabffe1
+      internalID: -1758991693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_91
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45e6219a98e7cc4ca2bfc13e0855a8d
+      internalID: 1171147956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shopkeeper-NPC_92
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7c8fc74040ed94a8b1cd6c59cc7e4d
+      internalID: -2014111853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_93
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78ca39611bd2794ca154236075de886
+      internalID: -2123255711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_94
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 0
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0dc2a2b51bfffc4a8dc5bedc74d480b
+      internalID: -75271727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: People1-NPC_95
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca899065eb62f44ba2db92262d226f9
+      internalID: 1493252126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      People1-NPC_70: 1181882683
+      People1-NPC_20: -230771662
+      People1-NPC_1: 143475367
+      People1-NPC_44: -1858335882
+      People1-NPC_51: 1223216193
+      People1-NPC_16: 1795571919
+      People1-NPC_29: 1622642927
+      People1-NPC_47: 866101983
+      People1-NPC_46: 2119794077
+      People1-NPC_3: -116526769
+      People1-NPC_25: 900755602
+      Shopkeeper-NPC_79: 1405835296
+      Shopkeeper-NPC_91: 1171147956
+      People1-NPC_83: -1653145842
+      People1-NPC_86: 2137970305
+      People1-NPC_15: -1732696075
+      People1-NPC_18: -1600332982
+      People1-NPC_95: 1493252126
+      People1-NPC_65: -76776000
+      People1-NPC_62: 511018139
+      People1-NPC_4: -858768525
+      People1-NPC_89: -622889151
+      People1-NPC_85: 282392600
+      People1-NPC_30: -1506596222
+      People1-NPC_33: -842079715
+      Shopkeeper-NPC_78: 1045896330
+      People1-NPC_75: 1254523091
+      Shopkeeper-NPC_56: -2016087230
+      People1-NPC_45: -709272853
+      People1-NPC_10: 67547741
+      People1-NPC_58: 1705604015
+      People1-NPC_93: -2123255711
+      People1-NPC_35: -1487203248
+      People1-NPC_2: 1396578192
+      People1-NPC_23: 1742656726
+      People1-NPC_24: 763731644
+      Shopkeeper-NPC_54: -1501685113
+      People1-NPC_43: 29311483
+      People1-NPC_74: -1238757431
+      Shopkeeper-NPC_80: -788187881
+      People1-NPC_12: -919771987
+      People1-NPC_61: 120364295
+      Shopkeeper-NPC_92: -2014111853
+      People1-NPC_42: 985337197
+      People1-NPC_72: -2103042008
+      People1-NPC_21: 171147658
+      People1-NPC_26: 1837069217
+      People1-NPC_7: -1652626280
+      People1-NPC_60: -1060994351
+      People1-NPC_82: 635370438
+      People1-NPC_88: -2021384066
+      Shopkeeper-NPC_67: 347763731
+      People1-NPC_36: -1316873346
+      Shopkeeper-NPC_55: 1859493045
+      People1-NPC_39: -379503627
+      People1-NPC_50: -640241026
+      People1-NPC_64: 1778112073
+      People1-NPC_41: -433939842
+      People1-NPC_38: 675588268
+      People1-NPC_57: 1763274690
+      People1-NPC_11: 855080086
+      People1-NPC_81: -253500690
+      People1-NPC_14: 2100974092
+      People1-NPC_71: 481482749
+      People1-NPC_52: -513549189
+      People1-NPC_49: 975014309
+      People1-NPC_13: 97274968
+      People1-NPC_94: -75271727
+      Shopkeeper-NPC_90: -1758991693
+      People1-NPC_37: 997652174
+      People1-NPC_40: 1752146050
+      People1-NPC_31: -1277309397
+      People1-NPC_9: 2098015035
+      People1-NPC_34: 1052755434
+      People1-NPC_0: 999380071
+      People1-NPC_5: 628506471
+      People1-NPC_32: -1036707233
+      People1-NPC_87: 1747154631
+      People1-NPC_59: -1901094488
+      People1-NPC_69: 1413891210
+      People1-NPC_77: 1153149296
+      People1-NPC_76: -1379360468
+      People1-NPC_27: -284185720
+      Shopkeeper-NPC_66: 342139482
+      People1-NPC_63: -1917641487
+      People1-NPC_19: 476021933
+      People1-NPC_53: -1199016185
+      People1-NPC_6: -550281856
+      Shopkeeper-NPC_68: 1922457536
+      People1-NPC_17: 1031761680
+      People1-NPC_8: -2118831599
+      People1-NPC_84: -1012101611
+      People1-NPC_73: -664426631
+      People1-NPC_22: -2022923922
+      People1-NPC_28: 1341595691
+      People1-NPC_48: -964635275
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
