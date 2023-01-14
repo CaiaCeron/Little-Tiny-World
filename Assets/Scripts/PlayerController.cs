@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,11 +14,16 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     private Animator anim;
     private SpriteRenderer sprite;
 
+    private bool faceNorth = false;
+    private bool faceSouth = false;
+    private bool faceWest = false;
+    private bool faceEast = false;
+
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
     }
 
 
@@ -48,7 +54,8 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
-        CharacterAnimation(direction);
+        CheckLastInputDirection();
+        CharacterAnimation();
 
     }
 
@@ -57,12 +64,80 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         rb2d.MovePosition(rb2d.position + direction * movementSpeed * Time.fixedDeltaTime);
     }
 
-    private void CharacterAnimation(Vector2 direction)
+    private void CharacterAnimation()
     {
         anim.SetFloat("MoveX", direction.x);
-        sprite.flipX = direction.x >= 1 ? true : false;
         anim.SetFloat("MoveY", direction.y);
         anim.SetFloat("Speed", direction.sqrMagnitude);
+
+        SetPlayerFacingDirection();
+    }
+
+    private void CheckLastInputDirection()
+    {
+        if (direction.x > 0)
+        {  
+            faceNorth = false;
+            faceSouth = false;
+            faceWest = false;
+            faceEast = true;
+        }
+
+        if (direction.x < 0)
+        {
+            faceNorth = false;
+            faceSouth = false;
+            faceWest = true;
+            faceEast = false;
+        }
+
+        if (direction.y > 0)
+        {
+            faceNorth = true;
+            faceSouth = false;
+            faceWest = false;
+            faceEast = false;
+        }
+
+        if (direction.y < 0)
+        {
+            faceNorth = false;
+            faceSouth = true;
+            faceWest = false;
+            faceEast = false;
+        }
+    }
+
+    private void SetPlayerFacingDirection()
+    {
+        if (faceNorth)
+        {
+            anim.SetBool("FaceNorth", faceNorth);
+            anim.SetBool("FaceSouth", faceSouth);
+            anim.SetBool("FaceEast", faceEast);
+            anim.SetBool("FaceWest", faceWest);
+        }
+        if (faceSouth)
+        {
+            anim.SetBool("FaceNorth", faceNorth);
+            anim.SetBool("FaceSouth", faceSouth);
+            anim.SetBool("FaceEast", faceEast);
+            anim.SetBool("FaceWest", faceWest);
+        }
+        if (faceEast)
+        {
+            anim.SetBool("FaceNorth", faceNorth);
+            anim.SetBool("FaceSouth", faceSouth);
+            anim.SetBool("FaceEast", faceEast);
+            anim.SetBool("FaceWest", faceWest);
+        }
+        if (faceWest)
+        {
+            anim.SetBool("FaceNorth", faceNorth);
+            anim.SetBool("FaceSouth", faceSouth);
+            anim.SetBool("FaceEast", faceEast);
+            anim.SetBool("FaceWest", faceWest);
+        }
     }
 
     private void BackToMainMenu()
