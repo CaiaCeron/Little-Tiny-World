@@ -2,58 +2,68 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+
+namespace LittleTyneWorld
 {
-    public static event Action<List<InventoryItem>> OnInventoryChange;
-
-    public List<InventoryItem> inventoryItems = new List<InventoryItem>();
-    private Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>();
-
-
-    private void OnEnable()
+    public class Inventory : MonoBehaviour
     {
-        Apple.OnAppleColected += AddToDictionary;
-        Gem.OnGemsCollected += AddToDictionary;
-    }
+        public static event Action<List<InventoryItem>> OnInventoryChange;
 
-    private void OnDisable()
-    {
-        Apple.OnAppleColected -= AddToDictionary;
-        Gem.OnGemsCollected -= AddToDictionary;
-
-    }
+        public List<InventoryItem> inventoryItems = new List<InventoryItem>();
+        private Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>();
 
 
-    public void AddToDictionary(ItemData itemData)
-    {
-        if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
+        private void Awake()
         {
-            item.AddToItemStack();
-            OnInventoryChange?.Invoke(inventoryItems);
-            Debug.Log($"{item.itemData.itemName} total stack is now: {item.itemStackSize}");
-        }
-        else
-        {
-            InventoryItem newItem = new InventoryItem(itemData);
-            inventoryItems.Add(newItem);
-            itemDictionary.Add(itemData, newItem);
-            OnInventoryChange?.Invoke(inventoryItems);
-            Debug.Log($"Uau you have collected your first {itemData.itemName}");
+            DontDestroyOnLoad(gameObject);
         }
 
-    }
-
-    public void RemoveFromDictionary(ItemData itemData)
-    {
-        if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
+        private void OnEnable()
         {
-            item.RemoveFromItemStack();
-            if (item.itemStackSize == 0)
+            Apple.OnAppleColected += AddToDictionary;
+            Gem.OnGemsCollected += AddToDictionary;
+        }
+
+        private void OnDisable()
+        {
+            Apple.OnAppleColected -= AddToDictionary;
+            Gem.OnGemsCollected -= AddToDictionary;
+
+        }
+
+
+        public void AddToDictionary(ItemData itemData)
+        {
+            if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
             {
-                inventoryItems.Remove(item);
-                itemDictionary.Remove(itemData);
+                item.AddToItemStack();
+                OnInventoryChange?.Invoke(inventoryItems);
+                Debug.Log($"{item.itemData.itemName} total stack is now: {item.itemStackSize}");
             }
-            OnInventoryChange?.Invoke(inventoryItems);
+            else
+            {
+                InventoryItem newItem = new InventoryItem(itemData);
+                inventoryItems.Add(newItem);
+                itemDictionary.Add(itemData, newItem);
+                OnInventoryChange?.Invoke(inventoryItems);
+                Debug.Log($"Uau you have collected your first {itemData.itemName}");
+            }
+
+        }
+
+        public void RemoveFromDictionary(ItemData itemData)
+        {
+            if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
+            {
+                item.RemoveFromItemStack();
+                if (item.itemStackSize == 0)
+                {
+                    inventoryItems.Remove(item);
+                    itemDictionary.Remove(itemData);
+                }
+                OnInventoryChange?.Invoke(inventoryItems);
+            }
         }
     }
 }
+

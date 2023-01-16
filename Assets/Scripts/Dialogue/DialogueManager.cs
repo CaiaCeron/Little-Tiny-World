@@ -1,8 +1,9 @@
 using TMPro;
 using UnityEngine;
-using Ink.Runtime;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Ink.Runtime;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class DialogueManager : MonoBehaviour
     
     private Story currentStory;
 
+    private DialogueVariables dialogueVariables;
+
+
+    [Header("Load global Variables UI")]
+    [SerializeField] private TextAsset loadGlobalVariables;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
@@ -23,11 +29,13 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
-            Debug.LogWarning("Found more than one DialogueManager instance!!!");
         } 
         instance = this;
+        dialogueVariables = new DialogueVariables(loadGlobalVariables);
+
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -50,10 +58,14 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Interact"))
+        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Interact") || Input.GetMouseButton(0))
         {
             ContinueStory();
         }
+    }
+    private void OverlayButtonPointer()
+    {
+        choices[0].GetComponent<Button>().Select();
     }
 
     private void DisplayDialogueChoices()
@@ -61,7 +73,6 @@ public class DialogueManager : MonoBehaviour
         List<Choice> currentChoices = currentStory.currentChoices;
         if (currentChoices.Count > choices.Length)
         {
-            Debug.LogError("List currentChoices Overflow!! " + currentChoices.Count);
         }
 
         int index = 0;
@@ -77,12 +88,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private IEnumerator ExitDialogueMode()
+    
+
+    public void EnterDialogueMode(TextAsset inkJSON)
     {
-        yield return new WaitForSeconds(0.25f);
-        isDialogPlaying = false;
-        dialoguePanel.SetActive(false);
-        dialogueText.text = "";
+        currentStory = new Story(inkJSON.text);
+        isDialogPlaying = true;
+        dialoguePanel.SetActive(true);
+        dialogueVariables.StartListening(currentStory);
+        OverlayButtonPointer();
+        ContinueStory();
+
     }
 
     private void ContinueStory()
@@ -98,17 +114,38 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    private IEnumerator ExitDialogueMode()
     {
-        currentStory = new Story(inkJSON.text);
-        isDialogPlaying = true;
-        dialoguePanel.SetActive(true);
-
-        ContinueStory();
+        yield return new WaitForSeconds(0.5f);
+        dialogueVariables.StopListening(currentStory);
+        isDialogPlaying = false;
+        dialoguePanel.SetActive(false);
+        dialogueText.text = "";
     }
 
     public void SelectChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
     }
+
+    public Ink.Runtime.Object GetVariable(string variableName)
+    {
+        Ink.Runtime.Object result = null;
+        dialogueVariables.variables.TryGetValue(variableName, out result);
+        if (result == null)
+        {
+
+        }
+
+        return result;
+    }
+
+
+    public void SetVariable()
+    {
+        currentStory.EvaluateFunction("OpenBuyScreen", "");
+    }
+
+   
 }

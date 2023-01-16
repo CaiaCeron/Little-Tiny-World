@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,17 +8,21 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
+    private GameObject inventory;
+
+    [SerializeField]
     private float movementSpeed = 0.0f;
     private Vector2 direction;
+    
 
     private Rigidbody2D rb2d;
     private Animator anim;
-    private SpriteRenderer sprite;
 
     private bool faceNorth = false;
     private bool faceSouth = false;
     private bool faceWest = false;
     private bool faceEast = false;
+    private bool isInventoryOpen = false;
 
 
     private void Awake()
@@ -30,6 +35,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     void Update()
     {
         CharacterInput();
+        OpenInventory(InventoryButton());
 
         //For Debug Purpose.
         BackToMainMenu();
@@ -38,25 +44,18 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
     void FixedUpdate()
     {
-        if (DialogueManager.instance.isDialogPlaying)
-        {
-            return;
-        }
+        if (DialogueManager.instance.isDialogPlaying) return;
         CharacterMovement();
     }
 
     private void CharacterInput()
     {
-        if (DialogueManager.instance.isDialogPlaying)
-        {
-            return;
-        }
-
-        direction.x = Input.GetAxisRaw("Horizontal");
-        direction.y = Input.GetAxisRaw("Vertical");
+        if (DialogueManager.instance.isDialogPlaying) return;
+     
+        direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        direction.Normalize();
         CheckLastInputDirection();
         CharacterAnimation();
-
     }
 
     private void CharacterMovement()
@@ -142,6 +141,8 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
     private void BackToMainMenu()
     {
+        if (DialogueManager.instance.isDialogPlaying) return;
+
         if (Input.GetButtonDown("Cancel"))
         {
             GameDataManager.instance.SaveGame();
@@ -150,6 +151,40 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         }
     }
 
+    private bool InventoryButton()
+    {
+        if (DialogueManager.instance.isDialogPlaying) return isInventoryOpen;
+
+        if (Input.GetKeyDown("tab"))
+        {   
+            if (isInventoryOpen )
+            {
+                isInventoryOpen = false;
+            }
+            else
+            {
+                isInventoryOpen = true;
+            }
+        }
+
+        return isInventoryOpen;
+    }
+
+    public void CloseInventoryUI()
+    {
+        if (DialogueManager.instance.isDialogPlaying) return;
+
+        if (isInventoryOpen) 
+        {
+            isInventoryOpen = false;
+        }
+
+    }
+
+    public void OpenInventory(bool isOpen)
+    {
+        inventory.SetActive(isOpen);
+    }
 
     public void LoadGameData(GameData data)
     {

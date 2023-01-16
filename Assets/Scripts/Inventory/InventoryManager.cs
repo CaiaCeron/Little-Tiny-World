@@ -11,12 +11,12 @@ public class InventoryManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Inventory.OnInventoryChange += DrawInventory;
+        LittleTyneWorld.Inventory.OnInventoryChange += DrawInventory;
     }
 
     private void OnDisable()
     {
-        Inventory.OnInventoryChange -= DrawInventory;
+        LittleTyneWorld.Inventory.OnInventoryChange -= DrawInventory;
     }
 
     void ResetInventory()
