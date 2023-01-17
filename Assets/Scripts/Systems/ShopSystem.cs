@@ -7,7 +7,7 @@ public class ShopSystem : MonoBehaviour
 	public Shopkeeper shopkeeper;
 	public Inventory playerInventory;
 
-	[Header("UI")]
+    [Header("Shop UI")]
 	public GameObject shopUI;
 	public TMP_Text playerMoney;
 	public TMP_Text shopName;
@@ -52,8 +52,8 @@ public class ShopSystem : MonoBehaviour
 	{
 		foreach (Item item in playerInventory.items)
 		{
-			AddItemToList(playerItems, item, ItemListing.ListingMode.Sell);
-		}
+			AddItemToList(playerItems, item, ItemListing.ListingMode.Sell); 
+        }
 	}
 
 	private void LoadShopItems()
@@ -142,7 +142,8 @@ public class ShopSystem : MonoBehaviour
 	void UpdateMoneyUI()
 	{
 		playerMoney.text = playerInventory.money.ToString();
-		if (shopkeeper.finiteMoney)
+
+        if (shopkeeper.finiteMoney)
 		{
 			shopMoney.text = shopkeeper.shopInventory.money.ToString();
 		}

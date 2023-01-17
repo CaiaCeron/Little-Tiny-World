@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Collision
+    uniqueID: 90208887
+    locked: 0
+  - name: Ground
+    uniqueID: 2420739139
+    locked: 0
+  - name: Walls
+    uniqueID: 2116587747
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foliage
+    uniqueID: 1186025191
     locked: 0

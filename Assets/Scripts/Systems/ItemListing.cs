@@ -7,6 +7,7 @@ using TMPro;
 public class ItemListing : MonoBehaviour
 {
 	public ShopSystem shopSystem;
+	public ChangeClothes outfit;
 	public Item item;
 	public Image icon;
 	public TMP_Text itemName;
@@ -32,6 +33,15 @@ public class ItemListing : MonoBehaviour
 		else if (mode.Equals(ListingMode.Buy))
 		{
 			shopSystem.BuyFromShop(item);
+			if (item.id == 1)
+			{
+				outfit.OutfitBlue();
+			}
+			if (item.id == 2)
+			{
+                outfit.OutfitRed();
+            }
+
 		}
 	}
 

@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +15,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     private Animator anim;
 
     private bool faceNorth = false;
-    private bool faceSouth = false;
+    private bool faceSouth = true;
     private bool faceWest = false;
     private bool faceEast = false;
     private bool isInventoryOpen = false;
