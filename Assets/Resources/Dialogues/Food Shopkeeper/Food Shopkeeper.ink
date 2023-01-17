@@ -3,8 +3,8 @@ INCLUDE ../Globals.ink
 -> FoodSeler
 
 === FoodSeler ===
-What it is your business here?
-    + [I would like to buy some clothes.]
+Hello sweet, what can I do for?
+    + [I would like to buy deserts.]
             ->OpenBuyScreen("0")
   
     + [Forget about, I better get going.]
@@ -12,7 +12,7 @@ What it is your business here?
     
 === OpenBuyScreen(choice)===
 ~ choiceMade = choice
-This is what I have. (BUY-SHOP-UI CALLED!)
+Take a look at my gorgeous deserts.
 -> END
 === ExitDialogue(choice) ===
 ~ choiceMade = choice

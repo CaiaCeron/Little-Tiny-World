@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c331200f4706e4f4589f51fd9cc59e29, type: 3}
   m_Name: Beer
   m_EditorClassIdentifier: 
-  id: 3
   icon: {fileID: -467358044, guid: d44f14c088fb6164681da93d1ff47ce2, type: 3}
+  id: 3
   price: 10
+  itemType: 1
+  canStack: 1

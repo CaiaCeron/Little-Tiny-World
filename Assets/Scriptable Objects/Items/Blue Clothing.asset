@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c331200f4706e4f4589f51fd9cc59e29, type: 3}
   m_Name: Blue Clothing
   m_EditorClassIdentifier: 
-  id: 1
   icon: {fileID: 420262027, guid: 77d4aa4df80ef2745bb1d8b2b974f884, type: 3}
+  id: 1
   price: 150
+  itemType: 0
+  canStack: 0

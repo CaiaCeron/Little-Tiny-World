@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c331200f4706e4f4589f51fd9cc59e29, type: 3}
   m_Name: Red Clothing
   m_EditorClassIdentifier: 
-  id: 2
   icon: {fileID: 1517633671, guid: 77d4aa4df80ef2745bb1d8b2b974f884, type: 3}
+  id: 2
   price: 250
+  itemType: 0
+  canStack: 0

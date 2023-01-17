@@ -3,8 +3,8 @@ INCLUDE ../Globals.ink
 -> ClotheSeler
 
 === ClotheSeler ===
-What it is your business here?
-    + [I would like to buy some clothes.]
+Hello young one, I have best outfits in the town. Do you wanna take look?
+    + [Of course, show me your collectionn.]
             ->OpenBuyScreen("0")
   
     + [Forget about, I better get going.]
@@ -12,7 +12,7 @@ What it is your business here?
     
 === OpenBuyScreen(choice)===
 ~ choiceMade = choice
-Take a look at my collection.
+Suit your self.
 -> END
 === ExitDialogue(choice) ===
 ~ choiceMade = choice

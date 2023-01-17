@@ -1,37 +1,40 @@
-﻿using System.Collections;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 
-public class InventorySlot : MonoBehaviour
+public class InventorySlot : MonoBehaviour,IDropHandler
 {
-    public Image icon;
-    public TextMeshProUGUI itemStackText;
+    public Image image;
+    public Color selectedColor;
+    public Color notSelectedColor;
 
 
-    public void ClearItemInSlot()
+    public void Awake()
     {
-        icon.enabled = false;
-        itemStackText.enabled = false;
+        DeselectSlot();
     }
 
-    public void ShowItemInSlot()
+    public void SelectSlot()
     {
-        icon.enabled = true;
-        itemStackText.enabled = true;
+        image.color = selectedColor;
     }
 
-    public void DrawItemInSlot(InventoryItem item)
+    public void DeselectSlot()
     {
-        if (item == null)
-        {
-            ClearItemInSlot();
-            return;
-        }
-
-        ShowItemInSlot();
-        icon.sprite = item.itemData.itemSprite;
-        itemStackText.text = item.itemStackSize.ToString();
+        image.color = notSelectedColor;
     }
+
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        if (transform.childCount != 0) return;
+
+        GameObject drop = eventData.pointerDrag;
+        InventoryItem dragItem = drop.GetComponent<InventoryItem>();
+        dragItem.parentWhileDragging = transform;
+
+    }
+    
 }
