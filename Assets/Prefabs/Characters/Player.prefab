@@ -31,7 +31,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3346831515415668939}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 34.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1786959863, guid: 96fd0ba0256e03649a2a320c7410e1a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -145,9 +145,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024023876, y: 0.2235947}
-  m_Size: {x: 0.37988046, y: 0.50000006}
-  m_Direction: 0
+  m_Offset: {x: 0.027641818, y: 0.09322768}
+  m_Size: {x: 0.43480694, y: 0.16683964}
+  m_Direction: 1
 --- !u!114 &3346831515415668980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69df3087a2a26f74094828b3788ebd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 4762745037833879332, guid: f948b471e2b464f40be219519f49213e,
-    type: 3}
+  inventory: {fileID: 0}
+  pauseMenu: {fileID: 0}
   movementSpeed: 4
 --- !u!114 &3346831515415668979
 MonoBehaviour:
@@ -187,8 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 424bc35ba74ded84bbd3244c04929051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: c2e446891a38b1e4788ad54836e6d3f5, type: 2}
+  items: []
   money: 500
 --- !u!114 &3346831515415668989
 MonoBehaviour:

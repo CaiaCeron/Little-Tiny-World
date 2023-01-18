@@ -23,16 +23,16 @@ public class TimeControl : MonoBehaviour
 
     public void PauseGame()
     {
-        if (!isGameOnPause && Time.timeScale == 1 )
+        if (!isGameOnPause)
         {
-            Time.timeScale = 0;
             isGameOnPause = true;
+            Time.timeScale = 0;
         }
     }
 
     public void ResumeGame()
     {
-        if (isGameOnPause && Time.timeScale == 0)
+        if (isGameOnPause)
         {
             isGameOnPause = false;
             Time.timeScale = 1;

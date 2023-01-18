@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
     private GameObject inventory;
+    [SerializeField]
     private GameObject pauseMenu;
 
     [SerializeField]
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     {
         CharacterInput();
         OpenInventory(InventoryButton());
+        OnpenPauseMenu();
     }
 
 
@@ -152,15 +154,9 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         return isInventoryOpen;
     }
 
-    public void CloseInventoryUI()
+    private void OpenInventory(bool isOpen)
     {
-        if (DialogueManager.instance.isDialogPlaying) return;
-
-        if (isInventoryOpen) 
-        {
-            isInventoryOpen = false;
-        }
-
+        inventory.SetActive(isOpen);
     }
 
     public void PlayFootStepsSounds()
@@ -168,12 +164,16 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         AudioManager.instance.PlayAudioClip("FootSteps");
     }
 
-
-    public void OpenInventory(bool isOpen)
+    private void OnpenPauseMenu()
     {
-        inventory.SetActive(isOpen);
+        if (Input.GetButtonDown("Cancel") && TimeControl.instance.isGameOnPause == false)
+        {
+            TimeControl.instance.PauseGame();
+            pauseMenu.SetActive(true);
+            Debug.Log("Ta vindo no open");
+        }
     }
-
+   
     public void LoadGameData(GameData data)
     {
         transform.position = data.playerPosition;
