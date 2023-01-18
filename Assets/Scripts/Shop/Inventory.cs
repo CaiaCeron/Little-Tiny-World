@@ -4,7 +4,6 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
 	public List<Item> items = new List<Item>();
-
 	public int money;
 
 	public void RemoveItem(Item item)
@@ -17,8 +16,4 @@ public class Inventory : MonoBehaviour
 		items.Add(item);
 	}
 
-	public void UseItem(Item item)
-	{
-		items.Remove(item);
-	}
 }

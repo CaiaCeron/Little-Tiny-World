@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 {
     [SerializeField]
     private GameObject inventory;
+    private GameObject pauseMenu;
 
     [SerializeField]
     private float movementSpeed = 0.0f;
@@ -32,9 +33,6 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     {
         CharacterInput();
         OpenInventory(InventoryButton());
-
-        //For Debug Purpose.
-        BackToMainMenu();
     }
 
 
@@ -135,18 +133,6 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         }
     }
 
-    private void BackToMainMenu()
-    {
-        if (DialogueManager.instance.isDialogPlaying) return;
-
-        if (Input.GetButtonDown("Cancel"))
-        {
-            GameDataManager.instance.SaveGame();
-
-            SceneManager.LoadSceneAsync("MainMenu");
-        }
-    }
-
     private bool InventoryButton()
     {
         if (DialogueManager.instance.isDialogPlaying) return isInventoryOpen;
@@ -176,6 +162,12 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         }
 
     }
+
+    public void PlayFootStepsSounds()
+    {
+        AudioManager.instance.PlayAudioClip("FootSteps");
+    }
+
 
     public void OpenInventory(bool isOpen)
     {

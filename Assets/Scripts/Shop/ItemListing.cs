@@ -6,7 +6,7 @@ using TMPro;
 
 public class ItemListing : MonoBehaviour
 {
-	public ShopSystem shopSystem;
+	public ShopManager shopSystem;
 	public Item item;
 	public Image icon;
 	public TMP_Text itemName;

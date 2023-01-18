@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using System;
+using UnityEngine.EventSystems;
 
 public class MainMenu : Menus
 {
@@ -45,7 +46,7 @@ public class MainMenu : Menus
     public void OnContinueGameButtonPressed()
     {
         DisableMenuButtonsUI();
-
+ 
         GameDataManager.instance.SaveGame();
 
         SceneManager.LoadSceneAsync("OverWorld");
@@ -54,6 +55,7 @@ public class MainMenu : Menus
 
     public void OnLoadGameButtonPressed() 
     {
+
         saveSlotsMenu.ActiveMenu(true);
         DeactivateMenu();
     }
@@ -61,6 +63,7 @@ public class MainMenu : Menus
     public void OnQuitGameButtonPressed()
     {
         DisableMenuButtonsUI();
+
 
         Application.Quit();
     }

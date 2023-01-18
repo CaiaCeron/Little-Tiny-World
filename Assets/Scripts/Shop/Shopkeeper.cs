@@ -4,7 +4,7 @@ using UnityEngine;
 public class Shopkeeper : MonoBehaviour
 {
     public Inventory shopInventory;
-    public ShopSystem shopSystem;
+    public ShopManager shopSystem;
 
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
@@ -73,7 +73,7 @@ public class Shopkeeper : MonoBehaviour
                 break;
 
             case "0":
-                shopSystem.OpenShop(this);
+                shopSystem.OpenShop(this);   
                 DialogueManager.instance.SetVariable();
                 break;   
                 
