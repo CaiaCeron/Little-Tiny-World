@@ -698,6 +698,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404777960}
     m_Modifications:
+    - target: {fileID: 4730581518711174, guid: ffa0bb45a9e8fd746aec98b9e107b00b, type: 3}
+      propertyPath: isSelectionMenu
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8674842853012679409, guid: ffa0bb45a9e8fd746aec98b9e107b00b,
         type: 3}
       propertyPath: m_Sprite
@@ -3631,6 +3635,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404777960}
     m_Modifications:
+    - target: {fileID: 4730581518711174, guid: ffa0bb45a9e8fd746aec98b9e107b00b, type: 3}
+      propertyPath: isSelectionMenu
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8674842853012679409, guid: ffa0bb45a9e8fd746aec98b9e107b00b,
         type: 3}
       propertyPath: m_Sprite
@@ -4884,7 +4892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isADenyAction: 0
-  isSelectionMenu: 0
+  isSelectionMenu: 1
 --- !u!1 &1183157490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7060,7 +7068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isADenyAction: 0
-  isSelectionMenu: 0
+  isSelectionMenu: 1
 --- !u!1 &1702834711
 GameObject:
   m_ObjectHideFlags: 0
@@ -7482,7 +7490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isADenyAction: 0
-  isSelectionMenu: 0
+  isSelectionMenu: 1
 --- !u!1 &1731590381
 GameObject:
   m_ObjectHideFlags: 0
@@ -7612,6 +7620,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404777960}
     m_Modifications:
+    - target: {fileID: 4730581518711174, guid: ffa0bb45a9e8fd746aec98b9e107b00b, type: 3}
+      propertyPath: isSelectionMenu
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8674842853012679409, guid: ffa0bb45a9e8fd746aec98b9e107b00b,
         type: 3}
       propertyPath: m_Sprite
@@ -8458,7 +8470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isADenyAction: 0
-  isSelectionMenu: 0
+  isSelectionMenu: 1
 --- !u!1 &1995774626
 GameObject:
   m_ObjectHideFlags: 0
@@ -9058,6 +9070,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404777960}
     m_Modifications:
+    - target: {fileID: 4730581518711174, guid: ffa0bb45a9e8fd746aec98b9e107b00b, type: 3}
+      propertyPath: isSelectionMenu
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8674842853012679410, guid: ffa0bb45a9e8fd746aec98b9e107b00b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

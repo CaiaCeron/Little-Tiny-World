@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void PlayAudioClip(string clipName) 
+    public void PlayAudioClip(string clipName)
     {
         Sound sound = Array.Find(sounds, sound => sound.clipName == clipName);
         if (sound == null)
@@ -45,6 +45,33 @@ public class AudioManager : MonoBehaviour
             return;
         }
         sound.source.Play();
+    }
+
+    public void MasterVolumeControl(float volumeLevel)
+    {
+        AudioListener.volume = volumeLevel;
+    }
+
+    public void ToggleMusic(string clipName, bool state)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.clipName == clipName);
+        if (sound == null)
+        {
+            Debug.Log("You probably wrote this variable name wrong. --> " + clipName + " <--");
+            return;
+        }
+        sound.source.mute = state;
+    }
+
+    public void ToggleSFX(string clipName, bool state)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.clipName == clipName);
+        if (sound == null)
+        {
+            Debug.Log("You probably wrote this variable name wrong. --> " + clipName + " <--");
+            return;
+        }
+        sound.source.mute = state;
     }
 
 }

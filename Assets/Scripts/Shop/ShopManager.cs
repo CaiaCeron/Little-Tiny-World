@@ -3,7 +3,8 @@ using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
-
+	[SerializeField]
+	private TextMeshProUGUI hud;
 
 	public bool shopOpen = false;
 	public Shopkeeper shopkeeper;
@@ -29,7 +30,10 @@ public class ShopManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
     }
-
+    private void Start()
+    {
+		UpdateMoneyUI();
+    }
     public void OpenShop(Shopkeeper keeper)
 	{
 		shopOpen = true;
@@ -151,10 +155,10 @@ public class ShopManager : MonoBehaviour
 		UpdateMoneyUI();
 	}
 
-	void UpdateMoneyUI()
+	private void UpdateMoneyUI()
 	{
 		playerMoney.text = playerInventory.money.ToString();
-		
+		hud.text = playerInventory.money.ToString();
         if (shopkeeper.finiteMoney)
 		{
 			shopMoney.text = shopkeeper.shopInventory.money.ToString();

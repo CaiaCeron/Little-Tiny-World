@@ -3,7 +3,7 @@ INCLUDE ../Globals.ink
 -> ClotheSeler
 
 === ClotheSeler ===
-Hello young one, I have best outfits in the town. Do you wanna take look?
+Hello young one, I have the best outfits in town. Do you wanna take look?
     + [Of course, show me your collectionn.]
             ->OpenBuyScreen("0")
   

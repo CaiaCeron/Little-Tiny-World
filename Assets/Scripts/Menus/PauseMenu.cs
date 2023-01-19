@@ -7,4 +7,10 @@ public class PauseMenu : MonoBehaviour
         TimeControl.instance.ResumeGame();
         gameObject.SetActive(false);     
     }
+
+
+    public void OnQuitGameButtonPressed()
+    {
+        Application.Quit();
+    }
 }
