@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TestInventorySlots : MonoBehaviour
+public class DebugGameSystems : MonoBehaviour
 {
     public InventoryManager inventoryManager;
+    public ChangeOutfits changeOutfit;
     public Item[] itemsToPickup;
 
     public void AddItemToInventory(int id)
@@ -31,5 +30,10 @@ public class TestInventorySlots : MonoBehaviour
         {
             Debug.Log("No Item in the slot");
         }
+    }
+
+    public void ChangeAppearence(string outifit)
+    {
+        changeOutfit.SpriteSheetName = outifit;
     }
 }

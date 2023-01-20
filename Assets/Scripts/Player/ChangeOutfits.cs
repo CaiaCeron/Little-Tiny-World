@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Unity.VisualScripting;
 
-public class ChangeClothes : MonoBehaviour
+public class ChangeOutfits : MonoBehaviour
 {
-
+    [HideInInspector]
     public string SpriteSheetName;
 
     private string LoadedSpriteSheetName;
@@ -42,15 +41,5 @@ public class ChangeClothes : MonoBehaviour
         spriteSheet = sprites.ToDictionary(x => x.name, x => x);
 
         LoadedSpriteSheetName = SpriteSheetName;
-    }
-
-    public void OutfitBlue()
-    {
-        SpriteSheetName = "player";
-    }
-
-    public void OutfitRed()
-    {
-        SpriteSheetName = "player2";
     }
 }
