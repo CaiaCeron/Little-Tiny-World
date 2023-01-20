@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Shopkeeper : MonoBehaviour
 {
@@ -69,7 +68,7 @@ public class Shopkeeper : MonoBehaviour
         string dialogChoice = ((Ink.Runtime.StringValue)DialogueManager.instance.GetVariable("choiceMade")).value;
         switch (dialogChoice)
         {
-            case "":
+            case " ":
                 break;
 
             case "0":

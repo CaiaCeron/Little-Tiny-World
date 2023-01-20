@@ -1,4 +1,5 @@
 
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -13,9 +14,10 @@ public class InventoryManager : MonoBehaviour
 
     public bool AddItem(Item item)
     {
+        //Check the inventory slot stack
         for (int i = 0; i < slots.Length; i++)
         {
-            InventorySlot slot = slots[i];
+            InventorySlot slot = slots[i];//Inventory slot index
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.stackCount < maxStackedItems && itemInSlot.item.canStack)
             {
@@ -25,13 +27,14 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
+        //Check the inventory slot
         for (int i = 0; i < slots.Length; i++)
         {
-            InventorySlot slot = slots[i];
+            InventorySlot slot = slots[i];//Inventory slot index
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
             if (itemInSlot == null)
             {
-                InsertNewItem(item, slot);
+                InsertNewItem(item, slot); // put the item in the first slot available.
                 return true;
             }
         }
@@ -45,7 +48,7 @@ public class InventoryManager : MonoBehaviour
         {
             InventorySlot slot = slots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.stackCount != 0 && itemInSlot.item.canStack)
+            if (itemInSlot != null && itemInSlot.item == item && itemInSlot.stackCount > 1 && itemInSlot.item.canStack)
             {
                 itemInSlot.stackCount--;
                 itemInSlot.RefreshStackCount();
@@ -57,9 +60,9 @@ public class InventoryManager : MonoBehaviour
         {
             InventorySlot slot = slots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot == null)
+            if (itemInSlot != null && itemInSlot.item == item)
             {
-                itemInSlot.stackCount--;
+                Destroy(itemInSlot.gameObject);
                 return true;
             }
         }
@@ -74,10 +77,7 @@ public class InventoryManager : MonoBehaviour
         inventoryItem.InitializeItem(item);
     }
 
-   
  
-
-
     public void UpdateInventory(Item item, InventorySlot slot)
     {
         GameObject newItemGameObject = Instantiate(inventoryItemPrefab, slot.transform);

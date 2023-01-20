@@ -11,7 +11,7 @@ public class GameData
 
     public GameData()
     {
-        this.playerMoney = 500;
+        this.playerMoney = 0;
         this.playerPosition = new Vector2(-65.23f, -38.45f);
     }
 

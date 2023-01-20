@@ -4,7 +4,7 @@ public class PauseMenu : MonoBehaviour
 {
     public void ResumeGame()
     {
-        TimeControl.instance.ResumeGame();
+        GameManager.instance.ResumeGame();
         gameObject.SetActive(false);     
     }
 

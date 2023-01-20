@@ -68,14 +68,6 @@ public class ShopManager : MonoBehaviour
         }
 	}
 
-	private void LoadPlayerItemTest()
-	{
-		foreach (Item item in playerInventory.items)
-		{
-            AddItemToList(playerItemsInventory, item, ItemListing.ListingMode.SELL);
-        }
-	}
-
 	private void LoadShopItems()
 	{
 		foreach (Item item in shopkeeper.shopInventory.items)
@@ -91,9 +83,6 @@ public class ShopManager : MonoBehaviour
 		listing.ListItem(item, mode);
 		listing.shopSystem = this;
 		RectTransform rect = clone.GetComponent<RectTransform>();
-
-		rect.sizeDelta = new Vector2(512, 80);
-
 		clone.transform.SetParent(list, false);
 	}
 
@@ -148,10 +137,10 @@ public class ShopManager : MonoBehaviour
 		{
 			shopkeeper.shopInventory.money += item.price;
 		}
-		playerInventory.AddItem(item); //Compra de fato os itens para o player na loja
+		playerInventory.AddItem(item);
 		inventoryManager.AddItem(item);
 
-        AddItemToList(playerItems, item, ItemListing.ListingMode.SELL);//Altera a UI
+        AddItemToList(playerItems, item, ItemListing.ListingMode.SELL);
 		UpdateMoneyUI();
 	}
 
