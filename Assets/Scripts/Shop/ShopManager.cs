@@ -7,6 +7,7 @@ public class ShopManager : MonoBehaviour
     public Shopkeeper shopkeeper;
     public Inventory playerInventory;
     public InventoryManager inventoryManager;
+    public TextMeshProUGUI hud;
 
     [Header("UI")]
     public GameObject shopUI;
@@ -16,6 +17,13 @@ public class ShopManager : MonoBehaviour
     public RectTransform playerItems;
     public RectTransform shopItems;
     public GameObject itemListingPrefab;
+
+
+    private void Start()
+    {
+        LoadPlayerItems();
+        UpdateMoneyUI();
+    }
 
     public void OpenShop(Shopkeeper keeper)
     {
@@ -47,6 +55,7 @@ public class ShopManager : MonoBehaviour
         foreach (Item item in playerInventory.items)
         {
             AddItemToList(playerItems, item, ItemListing.ListingMode.SELL);
+            inventoryManager.AddItem(item);
         }
     }
 
@@ -94,13 +103,14 @@ public class ShopManager : MonoBehaviour
             }
         }
         playerInventory.money += item.price;
-        //playerInventory.RemoveItem(item);
+        playerInventory.RemoveItem(item);
         inventoryManager.RemoveItem(item);
         RemoveItemFromList(playerItems, item);
         if (shopkeeper.finiteItems)
         {
             shopkeeper.shopInventory.AddItem(item);
             AddItemToList(shopItems, item, ItemListing.ListingMode.BUY);
+            inventoryManager.AddItem(item);
         }
         if (shopkeeper.finiteMoney)
         {
@@ -121,12 +131,13 @@ public class ShopManager : MonoBehaviour
         {
             shopkeeper.shopInventory.RemoveItem(item);
             RemoveItemFromList(shopItems, item);
+            inventoryManager.AddItem(item);
         }
         if (shopkeeper.finiteMoney)
         {
             shopkeeper.shopInventory.money += item.price;
         }
-        //playerInventory.AddItem(item);
+        playerInventory.AddItem(item);
         inventoryManager.AddItem(item);
         AddItemToList(playerItems, item, ItemListing.ListingMode.SELL);
         UpdateMoneyUI();
@@ -135,6 +146,8 @@ public class ShopManager : MonoBehaviour
     void UpdateMoneyUI()
     {
         playerMoney.text = playerInventory.money.ToString();
+        hud.text = playerInventory.money.ToString();
+
         if (shopkeeper.finiteMoney)
         {
             shopMoney.text = shopkeeper.shopInventory.money.ToString();
