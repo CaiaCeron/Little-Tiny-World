@@ -1,5 +1,3 @@
-
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -11,6 +9,9 @@ public class InventoryManager : MonoBehaviour
 
     [Header("List slots in Inventory")]
     public InventorySlot[] slots;
+
+    public Inventory inventory;
+
 
     public bool AddItem(Item item)
     {
@@ -76,15 +77,4 @@ public class InventoryManager : MonoBehaviour
         InventoryItem inventoryItem = newItemGameObject.GetComponent<InventoryItem>();
         inventoryItem.InitializeItem(item);
     }
-
- 
-    public void UpdateInventory(Item item, InventorySlot slot)
-    {
-        GameObject newItemGameObject = Instantiate(inventoryItemPrefab, slot.transform);
-        InventoryItem inventoryItem = newItemGameObject.GetComponent<InventoryItem>();
-        inventoryItem.InitializeItem(item);
-
-
-    }
-
 }

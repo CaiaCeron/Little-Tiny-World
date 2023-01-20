@@ -30,12 +30,9 @@ public class GameManager : MonoBehaviour, IDataPersistence
     }
 
 
-
-
-    public int GetPlayerMoney(int money)
+    public int GetPlayerMoney()
     {
-        Debug.Log(money);
-        return money;
+        return player.GetMoney();
     }
 
     public int GetShopkeeperMoney(int money)

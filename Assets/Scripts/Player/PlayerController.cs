@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour, IDataPersistence
 {
 
-    private int money;
+    private int moneyAmount = 200;
 
     [SerializeField]
     private GameObject inventory;
@@ -30,12 +30,6 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
     }
-
-    private void Start()
-    {
-        GameManager.instance.GetPlayerMoney(money);
-    }
-
 
     void Update()
     {
@@ -191,5 +185,8 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         data.playerPosition = transform.position;
     }
 
-
+    public int GetMoney()
+    {
+        return moneyAmount;
+    }
 }

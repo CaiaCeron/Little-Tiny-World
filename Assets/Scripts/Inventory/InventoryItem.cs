@@ -1,8 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using TMPro;
-using System.Collections.Generic;
 
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -36,8 +35,6 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         bool hideText = stackCount > 1;
         stackText.gameObject.SetActive(hideText);
     }
-
-
 
     public void OnBeginDrag(PointerEventData eventData)
     {
