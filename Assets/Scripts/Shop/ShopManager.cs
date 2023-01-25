@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
@@ -55,7 +55,6 @@ public class ShopManager : MonoBehaviour
         foreach (Item item in playerInventory.items)
         {
             AddItemToList(playerItems, item, ItemListing.ListingMode.SELL);
-            inventoryManager.AddItem(item);
         }
     }
 

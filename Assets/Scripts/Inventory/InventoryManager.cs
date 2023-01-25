@@ -7,10 +7,16 @@ public class InventoryManager : MonoBehaviour
     [Header("Item Slot Prefab")]
     public GameObject inventoryItemPrefab;
 
-    [Header("List slots in Inventory")]
+    [Header("slots in Inventory")]
     public InventorySlot[] slots;
 
     public Inventory inventory;
+
+
+    private void Start()
+    {
+        LoadInventoryItems();
+    }
 
 
     public bool AddItem(Item item)
@@ -76,5 +82,13 @@ public class InventoryManager : MonoBehaviour
         GameObject newItemGameObject = Instantiate(inventoryItemPrefab, emptySlot.transform);
         InventoryItem inventoryItem = newItemGameObject.GetComponent<InventoryItem>();
         inventoryItem.InitializeItem(item);
+    }
+
+    void LoadInventoryItems()
+    {
+        foreach (Item item in inventory.items)
+        {
+            AddItem(item);
+        }
     }
 }

@@ -31988,7 +31988,7 @@ MonoBehaviour:
   - {fileID: 1753562283}
   - {fileID: 1241966955}
   - {fileID: 1932392271}
-  inventory: {fileID: 0}
+  inventory: {fileID: 1602863139}
 --- !u!1 &1477637202
 GameObject:
   m_ObjectHideFlags: 0
@@ -33056,19 +33056,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597660097}
   m_CullTransparentMesh: 1
---- !u!1 &1602863131 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3346831515415668939, guid: 8933ef32d21f2764bae1851dd3dbb0cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 3346831514226962709}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1602863132 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3346831515415668989, guid: 8933ef32d21f2764bae1851dd3dbb0cf,
     type: 3}
   m_PrefabInstance: {fileID: 3346831514226962709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602863131}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ccaf66872da63742b60b0111ae9d87d, type: 3}
@@ -33080,26 +33074,24 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3346831514226962709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602863131}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69df3087a2a26f74094828b3788ebd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1602863139
+--- !u!114 &1602863139 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1314972580561568102, guid: 8933ef32d21f2764bae1851dd3dbb0cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 3346831514226962709}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602863131}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 424bc35ba74ded84bbd3244c04929051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
-  money: 0
 --- !u!1 &1607623432
 GameObject:
   m_ObjectHideFlags: 0
@@ -101245,6 +101237,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1678392554}
     m_Modifications:
+    - target: {fileID: 1314972580561568102, guid: 8933ef32d21f2764bae1851dd3dbb0cf,
+        type: 3}
+      propertyPath: money
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3346831515415668939, guid: 8933ef32d21f2764bae1851dd3dbb0cf,
         type: 3}
       propertyPath: m_Name
